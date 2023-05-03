@@ -1,6 +1,7 @@
 package com.longjunwang.core;
 
 import com.longjunwang.BeanDefinition;
+import com.longjunwang.exception.BeansException;
 
 /**
  * desc: BeanFactory
@@ -12,12 +13,12 @@ public interface BeanFactory {
 
     /**
      * Description: 获取Bean对象
-     * @param id
+     * @param beanName
      * @return java.lang.Object
      * Author: ink
      * Date: 2023/4/22
     */
-    Object getBean(String id);
+    Object getBean(String beanName) throws BeansException;
 
     /**
      * Description: 注册BeanDefinition
